@@ -1,0 +1,326 @@
+/*GENERAL*/
+:root{
+  --color-1: #be3144;
+  --color-2: white;
+  --color-3: #1f1f21;
+}
+
+
+*{
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--color-2);
+}
+
+h1, h2, h3{
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-2);
+}
+
+p, a{
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-2);
+}
+
+.title{
+  font-size: 60px;
+}
+
+/*HEADER*/
+
+header{
+  margin-top: 0;
+  background-color: var(--color-1);
+  height: 11%;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+#navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link{
+  text-align: center;
+  margin-right: 12px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+}
+
+.nav-link:hover{
+  background-color: blue;
+}
+
+@media only screen and (max-width: 650px){
+
+  .nav-link{
+  margin-right: 10px; 
+  width: 80px;
+}
+
+}
+
+/*WELCOME SECTION*/
+
+main{
+  padding-top: 5px;
+}
+
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #343639,
+    var(--color-3)
+  );
+}
+
+#welcome-title{
+  margin-bottom: 0;
+}
+
+#welcome-paragraph{
+  margin-top: 0;
+  color: var(--color-1);
+  font-style: italic;
+  font-size: 30px;
+}
+
+
+@media (min-width: 400px) and (max-width: 560px){
+
+  #welcome-title{
+    font-size: 35px;
+  }
+  
+}
+
+@media only screen and (max-width: 400px){
+
+  #welcome-title{
+    font-size: 25px;
+  }
+
+  #welcome-paragraph{
+    font-size: 15px;
+  }
+
+}
+
+/*PROJECTS SECTION*/
+
+#projects{
+  background-color: #45567d;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects h1{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-3);
+}
+
+#projects-grid{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 5%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.screenshot{
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-name{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-3);
+  height: 15%;
+}
+
+
+.project-link{
+  position: relative;
+  transition: color 0.3s;
+  padding: 0 15px 0 15px;
+  font-size: 18px;
+}
+
+.project-link::before{
+  content:"<";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-link::after{
+  content:"/>";
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-link:hover, .project-link:hover::before, .project-link:hover::after{
+  color: orange;
+  opacity: 1;
+}
+
+#other-projects{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  background-color: var(--color-3);
+  width: 100px;
+  border-radius: 3px;
+  transition: padding 0.3s;
+}
+
+#other-projects:hover{
+  background-color: var(--color-1);
+  padding-left: +15px;
+}
+
+
+
+@media only screen and (max-width: 750px){
+
+  #projects h1{
+    padding-bottom: 15px;
+    font-size: 45px;
+}
+
+  #projects-grid{
+  grid-template-columns: 90%;
+  row-gap: 10%;
+}
+
+}
+
+
+/* CONTACTS */
+
+#contact{
+  background: linear-gradient(
+    45deg,
+    #343639,
+    var(--color-3)
+  );
+  margin-top: -50px;
+  text-align: center;
+  height: 600px;
+  border-bottom: 3px solid var(--color-1);
+}
+
+#ending-title{
+  padding-top: 200px;
+  margin-bottom: 0;
+}
+
+#ending-paragraph{
+  margin-top: 5px;
+}
+
+#socials{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  height: 100px;
+  margin:auto;
+}
+
+.social{
+  font-size: 25px;
+  transition: padding 0.3s;
+  height: 70px;
+}
+
+.social:hover{
+  padding-top: +7px;
+}
+
+@media (min-width: 400px) and (max-width: 560px){
+
+  #ending-title{
+    font-size: 35px;
+  }
+
+  .social{
+  font-size: 20px;
+}
+  
+  #socials{
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 400px){
+
+  #ending-title{
+    font-size: 25px;
+  }
+
+  .social{
+  font-size: 15px;
+}
+  
+  #socials{
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  
+}
+
+/* FOOTER */
+
+footer{
+  background: linear-gradient(
+    45deg,
+    #343639,
+    var(--color-3)
+  );
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer p{
+  padding-top: 5px;
+}
+
+@media only screen and (max-width: 560px){
+
+  footer p{
+    font-size: 10px;
+  }
+}
